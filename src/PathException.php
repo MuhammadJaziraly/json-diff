@@ -56,11 +56,11 @@ class PathException extends Exception
         return $this->field;
     }
 
-	/**
-	 * @return int
-	 */
-	public function getOpIndex(): int {
-		return $this->opIndex;
-	}
-
+    /**
+     * @return int
+     */
+    public function getOpIndex(): int
+    {
+        return $this->opIndex;
+    }
 }

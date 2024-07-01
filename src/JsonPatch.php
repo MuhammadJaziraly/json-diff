@@ -198,7 +198,7 @@ class JsonPatch implements \JsonSerializable
                     $operation,
                     $pointerField,
                     $jsonPointerException->getCode(),
-					$opIndex
+                    $opIndex
                 );
                 if ($stopOnError) {
                     throw $pathException;
