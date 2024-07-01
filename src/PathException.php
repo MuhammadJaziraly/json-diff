@@ -14,8 +14,8 @@ class PathException extends Exception
     /** @var string */
     private $field;
 
-	/** @var int */
-	private $opIndex;
+    /** @var int */
+    private $opIndex;
 
     /**
      * @param string $message
@@ -30,14 +30,14 @@ class PathException extends Exception
         $operation,
         $field,
         $code = 0,
-		$opIndex,
+        $opIndex,
         Throwable $previous = null
     )
     {
         parent::__construct($message, $code, $previous);
         $this->operation = $operation;
         $this->field = $field;
-		$this->opIndex = $opIndex;
+        $this->opIndex = $opIndex;
     }
 
     /**

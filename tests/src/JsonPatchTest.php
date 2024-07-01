@@ -229,10 +229,10 @@ JSON;
         $data = array('abc' => $actualValue);
         $patch = new JsonPatch();
 
-		$operation0 = new JsonPatch\Test('/abc', 'def');
+        $operation0 = new JsonPatch\Test('/abc', 'def');
         $patch->op($operation0);
 
-		$operation1 = new JsonPatch\Move('/target', '/source');
+        $operation1 = new JsonPatch\Move('/target', '/source');
         $patch->op($operation1);
 
         $errors = $patch->apply($data, false);
@@ -306,7 +306,7 @@ JSON;
             $this->assertInstanceOf(PathException::class, $ex);
             $this->assertEquals($expectedMessage, $ex->getMessage());
             $this->assertEquals($expectedField, $ex->getField());
-			$this->assertEquals(0, $ex->getOpIndex()); // There is only one operation
-		}
+            $this->assertEquals(0, $ex->getOpIndex()); // There is only one operation
+        }
     }
 }
